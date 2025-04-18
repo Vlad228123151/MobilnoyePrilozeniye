@@ -1,0 +1,173 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxCalculator.MainPage"
+             Title="Главная"
+             BackgroundColor="#f0f0f0"
+             Padding="10">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+
+            <!-- Навигационная панель -->
+            <Grid BackgroundColor="#007AFF" Padding="15" ColumnSpacing="15" RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Налоговый калькулятор"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       VerticalOptions="Center"
+                       Grid.Column="0" />
+
+                <Button Text="Главная"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        FontSize="14"
+                        Grid.Column="1"
+                        Clicked="OnHomeClicked"/>
+
+                <Button Text="Вход"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        FontSize="14"
+                        Grid.Column="2"
+                        Clicked="OnLoginClicked"/>
+
+                <Button Text="Регистрация"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        FontSize="14"
+                        Grid.Column="3"
+                        Clicked="OnRegisterClicked"/>
+            </Grid>
+
+            <!-- Приветствие -->
+            <Frame BackgroundColor="White" CornerRadius="12" Margin="0" Padding="20" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Добро пожаловать в налоговый калькулятор"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#333" />
+
+                    <Label Text="Рассчитайте налоги быстро и удобно. Простота и точность — ваши помощники. Чтобы воспользоваться калькулятором, войдите или зарегистрируйтесь."
+                           FontSize="14"
+                           TextColor="#555"
+                           HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Раздел новостей -->
+            <Label Text="Последние новости"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   HorizontalTextAlignment="Center"/>
+
+            <VerticalStackLayout Padding="20,0" Spacing="15">
+
+                <!-- Новость 1 -->
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="В январе 2025 года были введены новые изменения в налоговое законодательство. Ознакомьтесь с актуальными новыми нормами..."
+                               FontSize="14"
+                               TextColor="#444"/>
+                        <Button Text="Читать далее"
+                                Clicked="OnReadMoreClicked"
+                                FontAttributes="Italic"
+                                TextColor="#007AFF"
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="Start"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Новость 2 -->
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="С нового года упрощен процесс подачи налоговых деклараций для малого бизнеса. Узнайте, как это поможет вам сэкономить время и средства..."
+                               FontSize="14"
+                               TextColor="#444"/>
+                        <Button Text="Читать далее"
+                                Clicked="OnReadMoreClicked"
+                                FontAttributes="Italic"
+                                TextColor="#007AFF"
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="Start"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Новость 3 -->
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Наш калькулятор теперь доступен в мобильной версии! Удобное приложение для ваших расчетов в любое время..."
+                               FontSize="14"
+                               TextColor="#444"/>
+                        <Button Text="Читать далее"
+                                Clicked="OnReadMoreClicked"
+                                FontAttributes="Italic"
+                                TextColor="#007AFF"
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="Start"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Преимущества -->
+            <Label Text="Преимущества нашего калькулятора"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#333"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,10,0,0"/>
+
+            <VerticalStackLayout Padding="20,0" Spacing="15">
+
+                <!-- Преимущество 1 -->
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Точность расчетов"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#222"/>
+                        <Label Text="Наш калькулятор использует актуальные налоговые ставки, чтобы гарантировать точность расчетов."
+                               FontSize="14"
+                               TextColor="#444"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Преимущество 2 -->
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Простота использования"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#222"/>
+                        <Label Text="Мы предлагаем интуитивно понятный интерфейс, который позволяет быстро и точно рассчитать налоги."
+                               FontSize="14"
+                               TextColor="#444"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Преимущество 3 -->
+                <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Мгновенные результаты"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="#222"/>
+                        <Label Text="Получите результаты сразу после ввода данных, чтобы не тратить время на ожидание."
+                               FontSize="14"
+                               TextColor="#444"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

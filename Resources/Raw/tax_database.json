@@ -1,0 +1,39 @@
+﻿{
+  "Users": [
+    {
+      "Id": 1,
+      "Username": "admin",
+      "Password": "adminpassword",
+      "Role": "admin"
+    }
+  ],
+  "Deductions": [
+    {
+      "Id": 1,
+      "Name": "Образование",
+      "Description": "Расходы на обучение",
+      "Cost": 15000
+    }
+  ],
+  "TaxRates": [
+    {
+      "Id": 1,
+      "UserType": "Физическое лицо",
+      "Rate": 13
+    },
+    {
+      "Id": 2,
+      "UserType": "Юридическое лицо",
+      "Rate": 20
+    }
+  ],
+  "TaxResults": [
+    {
+      "Id": 1,
+      "UserId": 1,
+      "Income": 100000,
+      "Tax": 13000,
+      "UserType": "Физическое лицо"
+    }
+  ]
+}

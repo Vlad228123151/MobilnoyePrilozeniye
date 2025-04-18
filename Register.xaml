@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxCalculator.Register"
+             Title="Регистрация"
+             BackgroundColor="#f4f7fb"
+             Padding="20">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" VerticalOptions="CenterAndExpand">
+
+            <!-- Заголовок -->
+            <Label Text="Создайте аккаунт"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#2c3e50"
+                   Padding="10"
+                   LineHeight="1.3"/>
+
+            <!-- Поле для логина -->
+            <Label Text="Логин:"
+                   FontSize="18"
+                   TextColor="#34495e"/>
+            <Frame BackgroundColor="#ffffff"
+                   Padding="15"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   BorderColor="#e0e0e0">
+                <Entry x:Name="usernameEntry"
+                       Placeholder="Введите логин"
+                       FontSize="16"
+                       BackgroundColor="Transparent"
+                       TextColor="#2c3e50"/>
+            </Frame>
+
+            <!-- Поле для пароля -->
+            <Label Text="Пароль:"
+                   FontSize="18"
+                   TextColor="#34495e"/>
+            <Frame BackgroundColor="#ffffff"
+                   Padding="15"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   BorderColor="#e0e0e0">
+                <Entry x:Name="passwordEntry"
+                       Placeholder="Введите пароль"
+                       IsPassword="True"
+                       FontSize="16"
+                       BackgroundColor="Transparent"
+                       TextColor="#2c3e50"/>
+            </Frame>
+
+            <!-- Подтверждение пароля -->
+            <Label Text="Подтвердите пароль:"
+                   FontSize="18"
+                   TextColor="#34495e"/>
+            <Frame BackgroundColor="#ffffff"
+                   Padding="15"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   BorderColor="#e0e0e0">
+                <Entry x:Name="confirmPasswordEntry"
+                       Placeholder="Повторите пароль"
+                       IsPassword="True"
+                       FontSize="16"
+                       BackgroundColor="Transparent"
+                       TextColor="#2c3e50"/>
+            </Frame>
+
+            <!-- Кнопка регистрации -->
+            <Button Text="Зарегистрироваться"
+                    BackgroundColor="#2980b9"
+                    TextColor="White"
+                    FontSize="20"
+                    Padding="15"
+                    CornerRadius="10"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,20"
+                    Clicked="OnRegisterClicked"
+                    BorderColor="#2980b9"
+                    BorderWidth="1"/>
+
+            <!-- Переход к логину -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Уже есть аккаунт? "
+                       FontSize="16"
+                       TextColor="#34495e"/>
+                <Label Text="Войти"
+                       FontSize="16"
+                       TextColor="#2980b9"
+                       FontAttributes="Bold">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnNavigateToLogin"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
